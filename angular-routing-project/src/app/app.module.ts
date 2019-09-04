@@ -25,7 +25,7 @@ import { RouterModule } from '@angular/router';
     AppRoutingModule,
     HomeModule,
     IndexModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes, { useHash: true })
   ],
   providers: [AuthService, AuthGuard],
   bootstrap: [AppComponent]
