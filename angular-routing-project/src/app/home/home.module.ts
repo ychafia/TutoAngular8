@@ -1,11 +1,8 @@
+import { HomeComponent } from './home.component';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { SettingsComponent } from './settings/settings.component';
-import { ProductsComponent } from './products/products.component';
-import { UserComponent } from './user/user.component';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 @NgModule({
   imports: [
@@ -13,6 +10,8 @@ import { UserComponent } from './user/user.component';
     FormsModule,
     RouterModule
   ],
-  declarations: [DashboardComponent, SettingsComponent, ProductsComponent, UserComponent]
+  declarations: [HomeComponent],
+  exports: [HomeComponent],
+  schemas:[CUSTOM_ELEMENTS_SCHEMA]
 })
 export class HomeModule { }

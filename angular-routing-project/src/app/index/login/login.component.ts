@@ -22,7 +22,7 @@ export class LoginComponent implements OnInit {
       this.errorText = "";
       //API action and Storage session
       if(this.authService.login(this.postData)){
-        this.router.navigate(['']);
+        this.router.navigate(['dashboard']);
       } else {
         this.errorText = "login/password incorrect !"
       }
